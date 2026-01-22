@@ -1,0 +1,122 @@
+{
+  "agent_name": "Web Scraper & Synthesizer Agent",
+  "agent_id": "69725146d6d0dcaec111c478",
+  "agent_purpose": "parser",
+  "description": "Scrapes web content from URLs and extracts structured data based on user-defined parameters, returning synthesized information in table format",
+  "response_schema": {
+    "status": "string",
+    "result": {
+      "urls_processed": [
+        "string"
+      ],
+      "extracted_data": [
+        {
+          "url": "string",
+          "title": "string",
+          "extracted_fields": {
+            "definitions": "string",
+            "features": "string",
+            "pricing": "string"
+          }
+        }
+      ],
+      "structured_table": [
+        {
+          "Feature": "string",
+          "Pricing Tier": "string"
+        }
+      ],
+      "summary": "string"
+    },
+    "metadata": {
+      "agent_name": "string",
+      "timestamp": "string",
+      "urls_count": "number",
+      "extraction_method": "string"
+    }
+  },
+  "example_response": {
+    "status": "success",
+    "result": {
+      "urls_processed": [
+        "https://www.example.com"
+      ],
+      "extracted_data": [
+        {
+          "url": "https://www.example.com",
+          "title": "Example Product",
+          "extracted_fields": {
+            "definitions": "Example product is a subscription-based service.",
+            "features": "Feature 1, Feature 2, Feature 3",
+            "pricing": "Basic: $10/month, Pro: $20/month, Enterprise: $50/month"
+          }
+        }
+      ],
+      "structured_table": [
+        {
+          "Feature": "Feature 1",
+          "Pricing Tier": "Basic - $10/month"
+        },
+        {
+          "Feature": "Feature 2",
+          "Pricing Tier": "Pro - $20/month"
+        },
+        {
+          "Feature": "Feature 3",
+          "Pricing Tier": "Enterprise - $50/month"
+        }
+      ],
+      "summary": "Extracted definitions, features, and pricing tiers for the example product."
+    },
+    "metadata": {
+      "agent_name": "Web Scraper & Synthesizer Agent",
+      "timestamp": "2023-10-07T12:00:00Z",
+      "urls_count": 1,
+      "extraction_method": "web scraping"
+    }
+  },
+  "is_actual_tested": true,
+  "test_timestamp": "2026-01-22T16:33:53.481486",
+  "test_message_used": "Parse this sample text for testing",
+  "actual_test_response": {
+    "status": "success",
+    "result": {
+      "urls_processed": [
+        "https://www.example.com"
+      ],
+      "extracted_data": [
+        {
+          "url": "https://www.example.com",
+          "title": "Example Product",
+          "extracted_fields": {
+            "definitions": "Example product is a subscription-based service.",
+            "features": "Feature 1, Feature 2, Feature 3",
+            "pricing": "Basic: $10/month, Pro: $20/month, Enterprise: $50/month"
+          }
+        }
+      ],
+      "structured_table": [
+        {
+          "Feature": "Feature 1",
+          "Pricing Tier": "Basic - $10/month"
+        },
+        {
+          "Feature": "Feature 2",
+          "Pricing Tier": "Pro - $20/month"
+        },
+        {
+          "Feature": "Feature 3",
+          "Pricing Tier": "Enterprise - $50/month"
+        }
+      ],
+      "summary": "Extracted definitions, features, and pricing tiers for the example product."
+    },
+    "metadata": {
+      "agent_name": "Web Scraper & Synthesizer Agent",
+      "timestamp": "2023-10-07T12:00:00Z",
+      "urls_count": 1,
+      "extraction_method": "web scraping"
+    }
+  },
+  "test_passed": true
+}
